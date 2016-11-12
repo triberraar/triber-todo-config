@@ -10,3 +10,8 @@ eureka:
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+spring:
+    boot:
+        admin:
+            routes:
+             endpoints: env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,heapdump,hystrix.stream,turbine.stream
