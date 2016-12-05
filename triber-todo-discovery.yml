@@ -4,10 +4,8 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
   server:
     renewal-percent-threshold: 0.01
     waitTimeInMsWhenSyncEmpty: 0
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
