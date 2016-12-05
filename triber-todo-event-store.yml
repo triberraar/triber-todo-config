@@ -24,3 +24,7 @@ spring:
   jackson:
       serialization:
         write-dates-as-timestamps: false
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
