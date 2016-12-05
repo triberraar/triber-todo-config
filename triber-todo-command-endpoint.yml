@@ -1,0 +1,15 @@
+server:
+  port: 0
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+  cloud:
+    stream:
+      bindings:
+        command:
+          destination: command.exchange
+          contentType: application/json
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false

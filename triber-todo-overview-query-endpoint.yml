@@ -1,0 +1,9 @@
+server:
+  port: 0
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300
+  jackson:
+      serialization:
+        write-dates-as-timestamps: false
