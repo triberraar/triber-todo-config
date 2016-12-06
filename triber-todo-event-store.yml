@@ -1,6 +1,5 @@
-server:
-  port: 0
 spring:
+  profiles: local
   rabbitmq:
     host: localhost
     port: 5672
@@ -8,22 +7,6 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: event
-  cloud:
-    stream:
-      bindings:
-        event:
-          destination: event.exchange
-          contentType: application/json
-          group: event-store
-      rabbit:
-        bindings:
-          event:
-            consumer:
-              durableSubscription: true
-  jackson:
-      serialization:
-        write-dates-as-timestamps: false
 eureka:
   client:
     serviceUrl:

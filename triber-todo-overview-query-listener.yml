@@ -1,27 +1,11 @@
-server:
-  port: 0
 spring:
+  profiles: local
   rabbitmq:
     host: localhost
     port: 5672
   data:
     elasticsearch:
       cluster-nodes: localhost:9300
-  cloud:
-    stream:
-      bindings:
-        event:
-          destination: event.exchange
-          contentType: application/json
-          group: overview-query
-      rabbit:
-        bindings:
-          event:
-            consumer:
-              durableSubscription: true
-  jackson:
-      serialization:
-        write-dates-as-timestamps: false
 eureka:
   client:
     serviceUrl:
