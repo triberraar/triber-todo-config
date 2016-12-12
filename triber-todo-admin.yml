@@ -4,3 +4,15 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+---
+spring:
+  profiles: docker
+  cloud:
+    config:
+      uri: http://triber-todo-config-server:8888
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://triber-todo-discovery:8761/eureka/
