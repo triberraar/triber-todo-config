@@ -11,3 +11,19 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+---
+spring:
+  profiles: docker
+  rabbitmq:
+    host: triber-todo-rabbit
+    port: 5672
+  data:
+    mongodb:
+      host: triber-todo-mongo
+      port: 27017
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://triber-todo-discovery:8761/eureka/
